@@ -1,32 +1,75 @@
 import React from "react";
 import styled from "styled-components";
 import { ContextoAppGlobal } from "../Components/ContextoApp";
+import {
+  AiFillInstagram,
+  AiFillTwitterCircle,
+  AiFillLinkedin,
+} from "react-icons/ai";
+import { BsFacebook } from "react-icons/bs";
 import { useContext } from "react";
+
+const AllCont = styled.div`
+  width: 100%;
+  box-sizing: border-box;
+  background-image: url("../src/assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  min-height: 100vh;
+  background-size: auto 100%;
+  overflow-y: hidden;
+  background-size: cover;
+`;
 
 const AllCon = styled.div`
   margin-top: 6rem;
-  text-align: center;
+
+  padding: 3px;
 
   h3 {
+    margin-left: 0.5rem;
     color: ${({ theme: { textColor } }) => textColor};
+    font-family: "Lato", sans-serif;
+    font-family: "Mukta", sans-serif;
+    font-family: "Questrial", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
   }
 
   p {
     color: ${({ theme: { textColor } }) => textColor};
+    font-family: "Lato", sans-serif;
+    font-family: "Mukta", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-family: "Questrial", sans-serif;
+    font-weight: bold;
   }
 
   div {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
+    width: 60%;
+    padding-left: 0.5rem;
+  }
+
+  .Redes {
+    margin-top: 2rem;
+  }
+
+  .re {
+    font-size: 3rem;
   }
 
   @media screen and (min-width: 780px) {
+    h3 {
+      font-size: 2rem;
+      margin-left: 4rem;
+      margin-bottom: 3rem;
+    }
+    div {
+      padding-left: 4rem;
+    }
     p {
-      text-align: center;
-      width: 40%;
-      margin-left: auto;
-      margin-right: auto;
+      font-size: 1.2rem;
+      width: 50%;
     }
   }
 `;
@@ -35,27 +78,31 @@ const About = () => {
   const { theme } = useContext(ContextoAppGlobal);
 
   return (
-    <AllCon theme={theme} className="Scr">
-      <h3>Nosotros somos tu tienda</h3>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-          distinctio voluptatibus accusantium consectetur sed soluta maxime
-          fugiat esse? Consequuntur labore blanditiis non, pariatur quas eos!
-          Blanditiis itaque iusto ipsum reiciendis! Lorem ipsum, dolor sit amet
-          consectetur adipisicing elit. Quaerat libero amet adipisci unde
-          maiores, sint, mollitia dignissimos quod nesciunt aliquam porro
-          laborum perferendis culpa, quisquam earum maxime qui officia illo.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima magnam
-          optio eligendi. Quae sequi ipsam aliquam provident facere maiores sed
-          ut recusandae sunt quas quo ratione in, alias ipsum illo. Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Dolorum laborum
-          reiciendis nostrum incidunt maxime voluptatem a autem vitae obcaecati
-          voluptatum enim, quae tempore est ipsum perspiciatis fugit ex maiores
-          optio!
-        </p>
-      </div>
-    </AllCon>
+    <AllCont>
+      <AllCon theme={theme} className="Scr">
+        <h3>Nosotros somos tu tienda</h3>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
+            distinctio voluptatibus accusantium consectetur sed soluta maxime
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
+            distinctio voluptatibus accusantium consectetur sed soluta maxime
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
+            distinctio voluptatibus accusantium consectetur sed soluta maxime
+          </p>
+        </div>
+        <div className="Redes">
+          <BsFacebook className="re" />
+          <AiFillInstagram className="re" />
+          <AiFillTwitterCircle className="re" />
+          <AiFillLinkedin className="re" />
+        </div>
+      </AllCon>
+    </AllCont>
   );
 };
 

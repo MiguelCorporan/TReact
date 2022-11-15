@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import styled from "styled-components";
 import Letters from "../Components/Letters";
 import SeleTienda from "../Components/SeleTienda";
 
@@ -35,11 +36,9 @@ const Shop = ({}) => {
     LlamdadaB();
   }, []);
 
-  console.log(Valor);
   return (
     <div className="mt">
       {Valor && <SeleTienda categorias={SeleCambioB} Sele={setSeleCambio} />}
-
       {Valor && <Letters Valor={Valor} />}
     </div>
   );

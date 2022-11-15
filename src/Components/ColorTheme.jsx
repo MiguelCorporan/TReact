@@ -6,10 +6,6 @@ import { ContextoAppGlobal } from "./ContextoApp";
 import { BsFillMoonFill, BsSunFill } from "react-icons/bs";
 
 const Algo = styled.div`
-  /*  position: absolute;
-  top: 4rem;
-  left: 0; */
-
   .sol {
     font-size: 2rem;
   }

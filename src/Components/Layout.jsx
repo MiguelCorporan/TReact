@@ -5,7 +5,7 @@ import About from "../Pages/About";
 import Card from "../Pages/Card";
 import Home from "../Pages/Home";
 import Shop from "../Pages/Shop";
-import ColorTheme from "./ColorTheme";
+
 import Navegation from "./Navegation";
 import Product from "./Product";
 
@@ -17,12 +17,10 @@ const LayoutStyled = styled.div`
   .main-header {
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: end;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-color: #19d3c3;
-    border-top: 1px solid #000;
+    background-color: transparent;
   }
 
   .dRSATZ {
@@ -42,23 +40,16 @@ const LayoutStyled = styled.div`
 
   h2 {
     margin-right: -4rem;
-    width: 7rem;
+    width: 8rem;
     font-size: 1.7rem;
   }
 
   @media screen and (min-width: 780px) {
     .main-header {
-      display: flex;
-      justify-content: space-between;
-      padding-left: 2rem;
-      margin-right: 2rem;
       border-top: none;
     }
     h2 {
       margin-right: 0;
-    }
-    .nav {
-      width: auto;
     }
   }
 `;

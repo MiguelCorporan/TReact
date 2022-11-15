@@ -1,68 +1,95 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { BsHouseDoorFill, BsFillPeopleFill, BsCartFill } from "react-icons/bs";
-import { FaShoppingBag } from "react-icons/fa";
+import {
+
+  BsCartFill,
+  BsFacebook,
+} from "react-icons/bs";
+
+import {
+  AiFillInstagram,
+  AiFillTwitterCircle,
+  AiFillLinkedin,
+} from "react-icons/ai";
 import styled from "styled-components";
-import ColorTheme from "./ColorTheme";
+
+import Card from "./Card";
 
 const Nav = styled.header`
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   position: static;
-  background-color: #19d3c3;
-  border-bottom: 1px solid #000;
+  background-color: transparent;
   position: fixed;
+  padding: 10px;
+
+  h2 {
+    width: 8rem;
+    font-family: "Mukta", sans-serif;
+    font-family: "Secular One", sans-serif;
+  }
 
   .uno {
     font-size: 2rem;
     color: #000;
     margin-left: 1rem;
     margin-right: 1rem;
+    cursor: pointer;
+  }
+  .socials {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .icn {
+    display: flex;
+    gap: 0.5rem;
   }
   .nav {
-    width: 100%;
-    height: 4rem;
+    position: absolute;
+    top: 4rem;
+    width: 80%;
+    left: 10%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background-color: #19d3c3;
-    border-top: 1px solid #000;
+  }
+
+  .nav a {
+    text-decoration: none;
+    font-family: "Mukta", sans-serif;
+    color: #000000;
   }
   @media screen and (min-width: 780px) {
     .nav {
-      position: static;
-      background-color: #19d3c3;
+      left: 25%;
+      width: 50%;
       border: none;
     }
   }
 `;
 
 const Navegation = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
   return (
     <Nav>
       <header className="main-header">
+        <div className="socials">
+          <BsFacebook />
+          <AiFillInstagram />
+          <AiFillTwitterCircle />
+          <AiFillLinkedin />
+        </div>
         <h2>Tu tienda</h2>
         <nav className="nav">
-          <Link to="/">
-            <BsHouseDoorFill className="uno" />
-          </Link>
-          <Link to="about">
-            <BsFillPeopleFill className="uno" />
-          </Link>
-          <Link to="shop">
-            <FaShoppingBag className="uno" />
-          </Link>
-          <Link to="card">
-            <BsCartFill className="uno" />
-          </Link>
+          <Link to="/">Home</Link>
+          <Link to="about">About</Link>
+          <Link to="shop">Store</Link>
         </nav>
         <div className="icn">
-          <ColorTheme />
+          <BsCartFill className="uno" onClick={() => setIsVisible((I) => !I)} />
+          <Card isVisible={isVisible} />
         </div>
       </header>
     </Nav>

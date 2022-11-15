@@ -6,8 +6,6 @@ const ContextoCardGlobal = createContext();
 const ContextoCard = ({ children }) => {
   const [Card, setCard] = useState([]);
 
-  // console.log(Card, "Hola");
-
   const AddCard = (DataV) => {
     const isIn = Card.find((P) => P.id == DataV.id);
     if (isIn) {
@@ -15,7 +13,6 @@ const ContextoCard = ({ children }) => {
         P.id == DataV.id ? { ...P, count: P.count + 1 } : P
       );
       setCard(result);
-      //  return;
     } else {
       setCard((D) => [...D, { ...DataV, count: 1 }]);
     }
@@ -31,7 +28,6 @@ const ContextoCard = ({ children }) => {
       isIn = { ...isIn, count: isIn.count - 1 };
       const res = Card.map((P) => (P.id == id ? isIn : P));
       setCard(res);
-      //console.log(isIn);
     }
   };
 

@@ -7,15 +7,19 @@ const SeleTienda = ({ categorias, Sele }) => {
   };
 
   const Selec = styled.div`
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     margin-left: 20px;
+
+    .Sele {
+      border-radius: 10px;
+    }
   `;
   return (
     <Selec>
       {categorias && (
         <div className="select">
-          <select onChange={cambio} name="" id="">
+          <select onChange={cambio} name="" id="" className="Sele">
             <option defaultValue={"default"}>Todes</option>
             {categorias.map((op) => (
               <option defaultValue={op} key={op}>

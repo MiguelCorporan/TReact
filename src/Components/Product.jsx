@@ -15,30 +15,35 @@ const Hola = styled.div`
 const SectionStyled = styled.section`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-top: 10rem;
 `;
 
 const ElBoton = styled.button`
   margin-top: 10px;
+  margin-left: 4rem;
+  padding: 4px 10px 4px 10px;
   text-align: center;
-  border-radius: 5px;
-  background-color: #5050e3c1;
+  border: 1px solid #000;
+  font-weight: bold;
+  background-color: transparent;
+  cursor: pointer;
 `;
 
 const Tarjetas = styled.div`
-  width: 18rem;
-  height: 34rem;
-  border: 1px solid rgba(59, 58, 58, 0.46);
+  width: 50%;
+  height: 20rem;
+  display: flex;
   border-radius: 20px;
-  box-shadow: -5px 3px 5px gray;
   text-align: center;
-  background-color: ${({ theme: { BColor } }) => BColor};
+
+  background-color: #ffffff;
   margin-left: auto;
   margin-right: auto;
+  padding: 5px;
 
   figure {
-    width: 90%;
-    height: 50%;
+    width: 45rem;
+    height: 80%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -53,10 +58,20 @@ const Tarjetas = styled.div`
   }
 
   .titl {
-    width: 90%;
     height: 2.2rem;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-family: "Lato", sans-serif;
+    font-family: "Mukta", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-family: "Questrial", sans-serif;
+    font-weight: bold;
+  }
+
+  .dt {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .Atras {
@@ -65,19 +80,23 @@ const Tarjetas = styled.div`
   }
 
   .Ad {
-    background-color: #ade8ad;
     cursor: pointer;
+    font-family: "Lato", sans-serif;
+    font-family: "Mukta", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-family: "Questrial", sans-serif;
+    font-weight: bold;
   }
 
   .Ad:active {
-    background-color: #60e760;
+    color: #60e760;
   }
 `;
 
 const Product = () => {
   const { product } = useParams();
   const [Valores, setValores] = useState(null);
-  // console.log(Valores);
+
   const { AddCard } = useContext(ContextoCardGlobal);
 
   useEffect(() => {
@@ -96,31 +115,33 @@ const Product = () => {
     <>
       {Valores && (
         <SectionStyled theme={theme}>
-          <Hola> {Valores.title}</Hola>;
+          <Link to={`/shop/`}>
+            <ElBoton>Atras</ElBoton>
+          </Link>
+  
           <Tarjetas>
             <figure>
               <img src={Valores.image} alt="" />
             </figure>
             <div>
               <p className="titl">{Valores.title}</p>
-            </div>
-            <div>{Valores.description}</div>
-            <div>
-              <p>${Valores.price}</p>
-            </div>
-            <div className="Inter">
-              <button
-                className="Ad"
-                onClick={() => AddCard(Valores)}
-                id={Valores.id}
-              >
-                Agregar
-              </button>
+
+              <div className="dt">{Valores.description}</div>
+              <div>
+                <p>${Valores.price}</p>
+              </div>
+
+              <div className="Inter">
+                <p
+                  className="Ad"
+                  onClick={() => AddCard(Valores)}
+                  id={Valores.id}
+                >
+                  Agregar
+                </p>
+              </div>
             </div>
           </Tarjetas>
-          <Link to={`/shop/`}>
-            <ElBoton>Atras</ElBoton>
-          </Link>
         </SectionStyled>
       )}
     </>

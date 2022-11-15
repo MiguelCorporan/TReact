@@ -6,7 +6,6 @@ import { ContextoCardGlobal } from "../Components/ContextoCard";
 import { ContextoAppGlobal } from "../Components/ContextoApp";
 
 const Contn = styled.div`
-  /* background-color: aqua; */
   margin-top: 4rem;
 `;
 
@@ -14,7 +13,6 @@ const Titl = styled.h3`
   color: #000;
   font-size: 2rem;
   text-align: center;
-  /* margin-top: 4.5rem; */
 `;
 
 const CardS = styled.div`
@@ -96,18 +94,12 @@ const CardS = styled.div`
   .con {
     font-weight: bold;
   }
-  /* 
-  @media screen and (min-width: 780px) {
-    background-color: #ffffff;
-  } */
 `;
 
 const Card = () => {
   const { Card, deleteCard } = useContext(ContextoCardGlobal);
   const { theme } = useContext(ContextoAppGlobal);
-  const [Conte, setConte] = useState("");
-  console.log(theme);
-
+  console.log({ Card, deleteCard, theme });
   return (
     <Contn>
       <Titl>Tus cosas</Titl>
