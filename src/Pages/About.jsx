@@ -93,6 +93,7 @@ const About = () => {
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
             distinctio voluptatibus accusantium consectetur sed soluta maxime
+            ©Miguel Corporan
           </p>
         </div>
         <div className="Redes">
