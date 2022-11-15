@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-
-  BsCartFill,
-  BsFacebook,
-} from "react-icons/bs";
+import { BsCartFill, BsFacebook } from "react-icons/bs";
 
 import {
   AiFillInstagram,
@@ -26,7 +22,8 @@ const Nav = styled.header`
   padding: 10px;
 
   h2 {
-    width: 8rem;
+    margin-left: auto;
+    margin-right: auto;
     font-family: "Mukta", sans-serif;
     font-family: "Secular One", sans-serif;
   }
@@ -39,6 +36,7 @@ const Nav = styled.header`
     cursor: pointer;
   }
   .socials {
+    font-size: 1.2rem;
     display: flex;
     gap: 0.5rem;
   }
@@ -56,6 +54,7 @@ const Nav = styled.header`
   }
 
   .nav a {
+    font-size: 1.4rem;
     text-decoration: none;
     font-family: "Mukta", sans-serif;
     color: #000000;

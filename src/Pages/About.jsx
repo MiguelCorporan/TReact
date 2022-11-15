@@ -9,10 +9,12 @@ import {
 import { BsFacebook } from "react-icons/bs";
 import { useContext } from "react";
 
+import bg from "../assets/bg.jpg";
+
 const AllCont = styled.div`
   width: 100%;
   box-sizing: border-box;
-  background-image: url("../src/assets/bg.jpg");
+  background-image: url(${bg});
   background-repeat: no-repeat;
   background-position: right;
   min-height: 100vh;
@@ -22,7 +24,7 @@ const AllCont = styled.div`
 `;
 
 const AllCon = styled.div`
-  margin-top: 6rem;
+  margin-top: 8rem;
 
   padding: 3px;
 
@@ -33,7 +35,7 @@ const AllCon = styled.div`
     font-family: "Mukta", sans-serif;
     font-family: "Questrial", sans-serif;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 800;
   }
 
   p {
@@ -46,16 +48,16 @@ const AllCon = styled.div`
   }
 
   div {
-    width: 60%;
+    width: 50%;
     padding-left: 0.5rem;
   }
 
   .Redes {
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
 
   .re {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   @media screen and (min-width: 780px) {

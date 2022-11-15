@@ -10,6 +10,7 @@ const ContentStyled = styled.section`
   }
 
   a {
+    font-weight: bold;
     text-decoration: none;
     padding: 0.8rem 1.6rem;
     border: 4px solid #000000;
@@ -21,6 +22,7 @@ const ContentStyled = styled.section`
   }
 
   strong {
+    font-size: 1.5rem;
     font-family: "Lato", sans-serif;
     font-family: "Mukta", sans-serif;
     font-family: "Poppins", sans-serif;

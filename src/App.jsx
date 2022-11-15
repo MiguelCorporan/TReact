@@ -13,7 +13,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     position: relative;
     
-    
   }
   .main-header{
     width: 100%;

@@ -60,7 +60,7 @@ const Layout = () => {
       <LayoutStyled>
         <Navegation />
         <Routes>
-          <Route index element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/shop/:product" element={<Product />} />

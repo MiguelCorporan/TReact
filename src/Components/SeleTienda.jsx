@@ -20,7 +20,7 @@ const SeleTienda = ({ categorias, Sele }) => {
       {categorias && (
         <div className="select">
           <select onChange={cambio} name="" id="" className="Sele">
-            <option defaultValue={"default"}>Todes</option>
+            <option defaultValue={"default"}>Todos</option>
             {categorias.map((op) => (
               <option defaultValue={op} key={op}>
                 {op}

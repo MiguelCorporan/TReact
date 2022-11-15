@@ -23,7 +23,7 @@ const ElBoton = styled.button`
   margin-left: 4rem;
   padding: 4px 10px 4px 10px;
   text-align: center;
-  border: 1px solid #000;
+  border: 2px solid #000;
   font-weight: bold;
   background-color: transparent;
   cursor: pointer;

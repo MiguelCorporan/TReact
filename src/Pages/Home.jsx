@@ -3,11 +3,12 @@ import styled from "styled-components";
 import Img1 from "../assets/bg.jpg";
 import Content from "../Components/Content";
 
+import bg from "../assets/bg.jpg";
+
 const PDiv = styled.div`
   width: 100%;
-
   box-sizing: border-box;
-  background-image: url(../src/assets/bg.jpg);
+  background-image: url(${bg});
   background-repeat: no-repeat;
   background-position: right;
   min-height: 100vh;
