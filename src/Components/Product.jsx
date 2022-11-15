@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 import { ContextoAppGlobal } from "./ContextoApp";
 
 const Hola = styled.div`
-  margin-top: 6rem;
-  text-align: center;
+  height: 100vh;
+  background-color: #d9dadf;
 `;
 
 const SectionStyled = styled.section`
@@ -112,13 +112,13 @@ const Product = () => {
   const { theme } = useContext(ContextoAppGlobal);
 
   return (
-    <>
+    <Hola>
       {Valores && (
         <SectionStyled theme={theme}>
           <Link to={`/shop/`}>
             <ElBoton>Atras</ElBoton>
           </Link>
-  
+
           <Tarjetas>
             <figure>
               <img src={Valores.image} alt="" />
@@ -144,7 +144,7 @@ const Product = () => {
           </Tarjetas>
         </SectionStyled>
       )}
-    </>
+    </Hola>
   );
 };
 

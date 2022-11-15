@@ -7,7 +7,7 @@ const PDiv = styled.div`
   width: 100%;
 
   box-sizing: border-box;
-  background-image: url("../src/assets/bg.jpg");
+  background-image: url(../src/assets/bg.jpg);
   background-repeat: no-repeat;
   background-position: right;
   min-height: 100vh;

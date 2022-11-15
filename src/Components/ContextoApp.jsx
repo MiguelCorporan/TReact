@@ -12,7 +12,7 @@ const ContextoApp = ({ children }) => {
 
   const blanco = {
     textColor: "#000000",
-    BGcolor: "#fff",
+    BGcolor: "#c71d1d",
     BColor: "#000",
   };
 

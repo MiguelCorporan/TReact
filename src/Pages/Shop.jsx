@@ -3,6 +3,10 @@ import styled from "styled-components";
 import Letters from "../Components/Letters";
 import SeleTienda from "../Components/SeleTienda";
 
+const Dv = styled.div`
+  background-color: #d9dadf;
+`;
+
 const Shop = ({}) => {
   const [Valor, seTValor] = useState(null);
   const [SeleCambio, setSeleCambio] = useState(null);
@@ -37,10 +41,10 @@ const Shop = ({}) => {
   }, []);
 
   return (
-    <div className="mt">
+    <Dv className="mt">
       {Valor && <SeleTienda categorias={SeleCambioB} Sele={setSeleCambio} />}
       {Valor && <Letters Valor={Valor} />}
-    </div>
+    </Dv>
   );
 };
 

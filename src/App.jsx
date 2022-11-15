@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     position: relative;
-    background-color: #D9DADF;
+    
     
   }
   .main-header{
